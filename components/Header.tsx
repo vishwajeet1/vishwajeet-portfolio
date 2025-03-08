@@ -37,6 +37,8 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <motion.button
+            type="button"
+            aria-label="Toggle menu"
             className="md:hidden text-[#475569] focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
             whileHover={{ scale: 1.1 }}
@@ -61,14 +63,14 @@ const Header = () => {
 
           {/* Desktop menu */}
           <div className="hidden md:flex space-x-8">
-            {menuItems.map((item, index) => (
+            {menuItems.map((item) => (
               <motion.div
                 key={item.label}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ 
                   duration: 0.5, 
-                  delay: 0.3 + (index * 0.1),
+                  delay: 0.3,
                   ease: "easeOut"
                 }}
               >
@@ -100,14 +102,14 @@ const Header = () => {
           transition={{ duration: 0.4, ease: "easeInOut" }}
         >
           <div className="pt-4 pb-2 space-y-4">
-            {menuItems.map((item, index) => (
+            {menuItems.map((item) => (
               <motion.div
                 key={item.label}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ 
                   duration: 0.4,
-                  delay: 0.1 + (index * 0.1),
+                  delay: 0.1,
                   ease: "easeOut"
                 }}
               >

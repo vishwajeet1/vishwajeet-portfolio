@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { motion, easeInOut, easeOut } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
@@ -22,7 +22,7 @@ const Hero = () => {
                 ease: "easeOut"
               }}
             >
-              Hi, I'm{' '}
+              Hi, I&apos;m{' '}
               <motion.span 
                 className="text-[#6B7280] relative inline-block"
                 whileHover={{ scale: 1.05 }}
@@ -88,9 +88,9 @@ const Hero = () => {
                 <Image
                   src="/assets/projects/vishwajeet-profile.jpg"
                   alt="Vishwajeet"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-full"
+                  fill
+                  sizes="(max-width: 768px) 256px, 384px"
+                  className="rounded-full object-cover"
                   priority
                 />
               </motion.div>

@@ -5,6 +5,8 @@ import About from '../components/About';
 import Contact from '../components/Contact';
 
 export default function Home() {
+  const currentYear = new Date().getFullYear();
+  
   return (
     <div>
       <Head>
@@ -23,7 +25,7 @@ export default function Home() {
       </main>
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-6 text-center">
-          <p>&copy; {new Date().getFullYear()} Vishwajeet. All rights reserved.</p>
+          <p>&copy; {currentYear} Vishwajeet. All rights reserved.</p>
         </div>
       </footer>
     </div>
