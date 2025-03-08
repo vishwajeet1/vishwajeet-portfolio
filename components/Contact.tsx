@@ -40,6 +40,7 @@ const Contact = () => {
         setStatus({ type: 'error', message: data.message });
       }
     } catch (error) {
+      console.error('Error sending message:', error);
       setStatus({ 
         type: 'error', 
         message: 'Failed to send message. Please try again later.' 
